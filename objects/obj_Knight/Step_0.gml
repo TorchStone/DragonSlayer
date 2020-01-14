@@ -3,8 +3,39 @@ var max_speed_fac = 1.2;
 var accel_fac = 1.2;
 var turn_factor = 1;
 var stun_factor = .7;
-var stun_boost_factor = 1.3;
+var stun_boost_factor = 1.5;
 var time = get_timer();
+var	jump_time = 1000000;
+//Jumping
+if(keyboard_check(vk_space) && jumping == 0){
+	jumping = 1;
+	player_stun = 1;
+	end_jump = time + jump_time;
+	end_stun = time + jump_time;
+}
+if (jumping == 1){
+	if (time <= end_jump - jump_time / 2){
+		image_xscale += .005;
+		image_yscale += .005;
+	}else{
+		image_xscale -= .005;
+		image_yscale -= .005;
+	}
+	if (time >= end_jump){
+		image_xscale = 1;
+		image_yscale = 1;
+		jumping = 0;
+	}
+}
+
+
+//Falling
+if (jumping == 0 && death == "none"){
+	if (tilemap_get_at_pixel(collision_map,x,y) == 20){
+			KnightHealth = 0;
+			death = "fall";
+	}
+}
 
 //Stuned
 if ((player_stun == 1) && (time >= end_stun)){
@@ -70,6 +101,19 @@ if (time >= flash and time < invTime) {
 }else if (time >= invTime){
 	image_speed = 0;
 	image_index = 0;
+}
+
+//death
+if KnightHealth <=0 {obj_GuiControl.win = -1;}
+if (death = "fall"){
+	player_stun = 1;
+	move_speed -= 1;
+	end_stun = time + 100000000
+	if (image_xscale >= 0){
+	image_xscale -= .01;
+	image_yscale -= .01;
+	}
+	if (tilemap_get_at_pixel(collision_map,x,y) != 20){move_speed = 0;}
 }
 
 var move_speed_this_frame = scr_frame_speed(move_speed, delta_time);

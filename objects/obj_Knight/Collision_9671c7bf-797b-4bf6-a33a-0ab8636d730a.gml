@@ -7,5 +7,5 @@ if (time >= invTime){
 	image_index = 2;
 	invTime = time + 1000000;
 	flash = time + 500000;
-	if KnightHealth <=0 {obj_GuiControl.win = -1;}
+	if KnightHealth <=0 {death = "fire"}
 }

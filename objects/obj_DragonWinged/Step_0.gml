@@ -35,7 +35,7 @@ switch (attack) {
 
 if (time >= wait1 && distance_to_object(obj_Knight) < 70) {
 	if (count < 20){
-		repeat(30)
+		repeat(20)
 			{
 			instance_create_layer(x, y,"ground",obj_AirProj);
 			}

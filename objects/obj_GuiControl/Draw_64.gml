@@ -4,11 +4,11 @@ var time = get_timer();
 var frame = 0;
 
 if (instance_exists(obj_Dragon)){
-	if obj_Dragon.drg_health >= 750 {frame = 0}
-	else if obj_Dragon.drg_health >= 500 {frame = 1}
-	else if obj_Dragon.drg_health >= 250 {frame = 2}
-	else if obj_Dragon.drg_health >= 50 {frame = 3}
-	else if obj_Dragon.drg_health >= 0 {frame = 4}
+	if obj_Dragon.drg_health / obj_Dragon.drg_health_int >= .75 {frame = 0}
+	else if obj_Dragon.drg_health / obj_Dragon.drg_health_int >= .5 {frame = 1}
+	else if obj_Dragon.drg_health / obj_Dragon.drg_health_int >= .25 {frame = 2}
+	else if obj_Dragon.drg_health / obj_Dragon.drg_health_int >= .05 {frame = 3}
+	else if obj_Dragon.drg_health/ obj_Dragon.drg_health_int >= 0 {frame = 4}
 	else {frame = 5}
 }
 

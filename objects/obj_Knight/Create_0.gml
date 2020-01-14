@@ -8,3 +8,7 @@ player_stun = 0;
 stun_set = 1;
 image_speed = 0;
 last_fire = 0;
+collision_map = layer_tilemap_get_id("Floor")
+jumping = 0;
+death = "none"
+end_jump = 0;
