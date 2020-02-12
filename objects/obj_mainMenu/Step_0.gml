@@ -14,8 +14,12 @@ if (move != 0) {
 	if (opt < 0) {opt = array_length_1d(menu) - 1;}
 	if (opt > (array_length_1d(menu) - 1)) {opt = 0;}
 	
-	menu[0].image_index = 0;
-	menu[1].image_index = 0;
+	var i;
+	for (i = 0; i < array_length_1d(menu); i += 1)
+	{
+		menu[i].image_index = 0;
+	
+	}
 	
 	menu[opt].image_index = 1;
 	

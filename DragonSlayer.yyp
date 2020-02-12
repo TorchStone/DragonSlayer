@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "b47b2c7f-2cd0-40da-a15a-4278d1e3ec85",
+            "Value": {
+                "id": "cc5de179-9d6f-4622-a40e-73881176761b",
+                "resourcePath": "rooms\\rm_Test\\rm_Test.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "ba4e28fa-cd90-4016-8c11-cb9f83e4fe34",
             "Value": {
                 "id": "11de568a-b425-4141-8319-2ac162263c3e",
@@ -383,14 +391,6 @@
             }
         },
         {
-            "Key": "cf560215-4119-4f46-874f-969fc30e1d71",
-            "Value": {
-                "id": "44bbd49e-3418-432b-8d3f-2edac139dbf1",
-                "resourcePath": "tilesets\\tileset1\\tileset1.yy",
-                "resourceType": "GMTileSet"
-            }
-        },
-        {
             "Key": "d4af2e7b-b49d-4b2c-bdb7-ad896e939fca",
             "Value": {
                 "id": "722b2828-0d81-44cd-aef6-dbf0df16c2e6",
@@ -404,6 +404,14 @@
                 "id": "877aaef9-c5b5-4f0b-8b86-e102587b2de6",
                 "resourcePath": "views\\d922b510-30a3-4b41-8ac8-632cfb8eea67.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e1152052-54b1-447c-a823-a97a5707a82e",
+            "Value": {
+                "id": "59eeca56-d1bb-4d8c-b7c3-877932147a59",
+                "resourcePath": "objects\\obj_testButton\\obj_testButton.yy",
+                "resourceType": "GMObject"
             }
         },
         {

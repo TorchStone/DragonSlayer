@@ -13,5 +13,5 @@ drg_speed = drg_speed_int;
 last_time = 0;
 attack_start = 0;
 flash_count = 0;
-drg_health = 1;
-drg_health_int = 1;
+drg_health = 10;
+drg_health_int = drg_health;
